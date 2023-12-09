@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading Assignment</title>
+</head>
+<style>
+    body{
+        display: flex;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(#2196f3 , #e91e63);
+    }
+    main{
+        padding: 40px;
+        border: transparent;
+        box-shadow:  20px 20px 60px #382d2d,
+             -20px -20px 60px #382d2d;
+    }
+    .box{
+        border: 3px solid royalblue;
+        height: 60px;
+        border-radius: 5px;
+        border: 2px solid grey;
+        width: 70%;
+        margin: 0 auto;
+        background-color: aliceblue;
+        text-align: center;
+        color: orange;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .divs{
+        position: absolute;
+        bottom: -120px;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .divs span{
+        height: 60px;
+        width: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        animation: boxscrolling 10s linear infinite;
+        position: relative;
+        overflow: hidden;
+    }
+    @keyframes boxscrolling {
+        100%{
+          transform: translateY(-200vh);
+        }
+    }
+    .divs span.first{
+        animation-delay: 2.2s;
+        transform: scale(2.15)
+    }
+    .divs span.second{
+        animation-delay: 3.5s;
+        transform: scale(1.55)
+    }
+    .divs span.third{
+        animation-delay: 0.2s;
+        transform: scale(0.35)
+    }
+    .divs span.fourth{
+        animation-delay: 6s;
+        transform: scale(2.15)
+    }
+    .divs span.fifth{
+        animation-delay: 7s;
+        transform: scale(0.5)
+    }
+    .divs span.sixth{
+        animation-delay: 4s;
+        transform: scale(2.5)
+    }
+    .divs span.seventh{
+        animation-delay: 3;
+        transform: scale(1.5)
+    }
+    .divs span.eight{
+        animation-delay: 2s;
+        background-color: #e91e63;
+    }
+    .divs span.nine{
+        animation-delay: 10s;
+        background-color: #2196f3;
+    }
+    .divs span.ten{
+        animation-delay: 8s;
+        background-color: #e91e63;
+    }
+</style>
+<body>
+      <div class="divs">
+        <span class="first"></span>
+        <span class="Second"></span>
+        <span class="third"></span>
+        <span class="fourth"></span>
+        <span class="fifth"></span>
+        <span class="sixth"></span>
+        <span class="seventh"></span>
+        <span class="Eight"></span>
+        <span class="nine"></span>
+        <span class="ten"></span>
+      </div>
+    <main class="card text-center">
+        <div class="">
+            <div>
+                <marquee behavior="div" direction="right"><em>Welcome to the official grading page</em></marquee>
+                <h1 style="text-decoration: underline; font-size:40px;">GRADING SYSTEM</h1>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <input type="Number" class="form-control p-5" id="num" placeholder="Enter your score" aria-label="Enter your score" aria-describedby="button-addon" style="height:60px;width:70%; font-size:30px;">
+              <button class="btn btn-success text-white p-3" type="button" id="button-addon" onclick="checkValue()" style="height:60px;">Check Value</button>
+            </div><br>
+            <div id="display" class="box border border-dark">See result here</div><br><br>
+            <button><a href="index.html" style="background-color: green;text-decoration:none;color:white;">Refresh</a></button>           
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

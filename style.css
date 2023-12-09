@@ -1,0 +1,76 @@
+body{
+    background: linear-gradient(#2196f3 , #e91e63);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.grading{
+    width: 40%;
+    background-color: transparent;
+    margin: 200px auto;
+    padding: 80px;
+    box-shadow:20px 20px 60px #382d2d,
+    -20px -20px 60px #382d2d;
+}
+.bubbles{
+    position: absolute;
+    bottom: -120px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.bubbles span {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(145, 140, 140);
+    border: none;
+    animation: move 10s linear infinite;
+    position: relative;
+}
+@keyframes move {
+    100%{
+        transform: translateY(-100vh);
+    }
+}
+.bubbles span .one {
+    animation-delay: 2.2s;
+    transform: scale(2.15);
+}
+ 
+.bubbles span .two {
+    animation-delay:1.5s;
+    transform: scale(3.0);
+}
+ 
+.bubbles span .three{
+    animation-delay: 0.2s;
+    transform: scale(2);
+}
+
+.bubbles span .four{
+    animation-delay: 0.5s;
+    transform: scale(0.5);
+}
+
+#displayResult{
+    background-color: aqua;
+    border:none solid;
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 250px) and (max-width: 476px) {
+    .grading{
+        width: 100%;
+    }
+
+    #displayResult{
+        width: 80%;
+    }
+}
